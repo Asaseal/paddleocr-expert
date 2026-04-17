@@ -1,0 +1,7 @@
+interface:
+  display_name: "PaddleOCR Expert"
+  short_description: "PaddleOCR/PaddleX 技术支持、客户回复与回访记录助手"
+  default_prompt: "Use $paddleocr-expert to solve PaddleOCR/PaddleX questions, draft a ready-to-send WeChat reply, and produce a structured customer follow-up record."
+
+policy:
+  allow_implicit_invocation: true
