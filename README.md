@@ -1,41 +1,65 @@
 # paddleocr-expert
 
-`paddleocr-expert` is a Codex skill for PaddleOCR and PaddleX support. It helps with OCR, PDF parsing, table extraction, deployment, troubleshooting, customer replies, and follow-up records.
+Open-source Codex skill source for PaddleOCR and PaddleX support.
 
-This repository is laid out so that the repository root is the skill directory. The required `SKILL.md` is at the top level.
+This repository now uses a more standard skill-repo layout:
 
-## Install
-
-### Install with Codex skill installer
-
-If the installer supports GitHub repo + path arguments, use:
-
-```bash
-python <path-to-install-skill-from-github.py> --repo Asaseal/paddleocr-expert --path . --name paddleocr-expert
+```text
+paddleocr-expert/
+├── LICENSE
+├── README.md
+└── skills/
+    └── paddleocr-expert/
+        ├── SKILL.md
+        ├── agents/
+        └── references/
 ```
 
-For agents, the important part is:
+The actual skill lives at:
 
-- repo: `Asaseal/paddleocr-expert`
-- path: `.`
-- name: `paddleocr-expert`
+```text
+skills/paddleocr-expert
+```
 
-### Manual install
+## Quick Install
 
-1. Clone or download this repository.
-2. Copy the repository contents into:
+### For humans
+
+Clone or download this repository, then copy:
+
+```text
+skills/paddleocr-expert
+```
+
+into:
 
 ```text
 ~/.codex/skills/paddleocr-expert/
 ```
 
-3. Restart Codex so the new skill is discovered.
+Restart Codex after copying.
 
-After install, the destination should contain:
+### For Codex skill installer
 
-- `SKILL.md`
-- `agents/openai.yaml`
-- `references/`
+Use:
+
+```bash
+python <path-to-install-skill-from-github.py> --repo Asaseal/paddleocr-expert --path skills/paddleocr-expert
+```
+
+## Copy-Paste Agent Install Instruction
+
+If you want to hand this repo to another agent, give it this exact instruction:
+
+```text
+Install the Codex skill from GitHub repo Asaseal/paddleocr-expert. The skill path inside the repo is skills/paddleocr-expert. Install it with the skill name paddleocr-expert.
+```
+
+Or if the agent works better with a URL:
+
+```text
+Install the Codex skill from https://github.com/Asaseal/paddleocr-expert . The skill directory inside the repo is skills/paddleocr-expert. Use paddleocr-expert as the installed skill name.
+```
 
 ## What This Skill Does
 
@@ -45,11 +69,9 @@ After install, the destination should contain:
 - Draft ready-to-send WeChat replies for customer support
 - Produce structured follow-up records for operations workflows
 
-## Repository
+## Repository Facts
 
 - GitHub: <https://github.com/Asaseal/paddleocr-expert>
+- Skill path: `skills/paddleocr-expert`
+- Install name: `paddleocr-expert`
 - License: `MIT`
-
-## Note For Agents
-
-If a user pastes only the repository URL, treat the repository root as the skill path and install it as `paddleocr-expert`.
